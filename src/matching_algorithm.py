@@ -1,10 +1,10 @@
 import pandas as pd
 
 # File paths
-#bill_file = "bill test.xlsx"
-#em_file   = "EM test.csv"
-bill_file = "(12) City_JUNusage_Aug-bill.xlsx"
-em_file = "bill Export.csv"
+bill_file = "bill test.xlsx"
+em_file   = "EM test.csv"
+#bill_file = "(12) City_JUNusage_Aug-bill.xlsx"
+#em_file = "bill Export.csv"
 
 # Read in the data
 df_bill = pd.read_excel(bill_file, dtype={'ACCT#': str})
