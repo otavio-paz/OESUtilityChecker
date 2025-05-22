@@ -8,7 +8,7 @@ import os
 class DropZone(tk.Label):
     def __init__(self, master, label, report_text, filetype_key, file_store, on_files_ready):
         # Initialize the label widget with styling
-        super().__init__(master, text=label, bg="#2E2E2E", fg="white", borderwidth=1, relief="solid", pady=10)
+        super().__init__(master, text=label, bg="#2E2E2E", fg="white", borderwidth=1, relief="solid", pady=12)
         # Enable drag-and-drop of files
         self.drop_target_register(DND_FILES)
         self.dnd_bind("<<Drop>>", self.on_drop)
@@ -160,7 +160,10 @@ def validate_files(em_file, bill_file, report_text):
         report_text.insert(tk.END, "\n=== VALIDATION SUMMARY ===\n")
         for acct, ok in results.items():
             status = "OK" if ok else "ERROR"
-            report_text.insert(tk.END, f"Account {acct}: {status}\n")
+
+            # Attempt to get the address for this account
+            address = df_bill[df_bill['ACCT#'] == acct].iloc[0, 1] if not df_bill[df_bill['ACCT#'] == acct].empty else "Address not found"
+            report_text.insert(tk.END, f"Account {acct} | Address: {address} | Status: {status}\n")
         report_text.insert(tk.END, "\n=== DETAILS ===\n")
         if errors:
             for e in errors:
