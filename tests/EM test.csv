@@ -1,0 +1,63 @@
+Utility Bill Date,Facility Name,Account Number,Line Item Type Name,Line Item Usage,Line Item Cost,Account Financial Code 1,Account Financial Code 2,Line Item Start Date,Line Item End Date,Facility Number,Line Item Category Name,Meter Type Name
+7/1/24,29 N Cedar St,11-00130-6,Electric-Usage (KWH),56,14.92,"1881	",,6/1/24,7/1/24,"55	",Usage,Grid Purchased
+7/1/24,29 N Cedar St,11-00130-6,Sewer-Usage (CF),0,21.33,"1881	",,6/1/24,7/1/24,"55	",Usage,N/A
+7/1/24,29 N Cedar St,11-00130-6,Trash (City Charges),0,12.5,"1881	",,6/1/24,7/1/24,"55	",Charges,Refuse
+7/1/24,29 N Cedar St,11-00130-6,Water-Usage (CF),0,29.37,"1881	",,6/1/24,7/1/24,"55	",Usage,Potable
+7/1/24,35 N Cedar St,11-00160-6,Electric-Usage (KWH),51,14.26,"1849	",,6/1/24,7/1/24,"57	",Usage,Grid Purchased
+7/1/24,35 N Cedar St,11-00160-6,Sewer-Usage (CF),1900,135.09,"1849	",,6/1/24,7/1/24,"57	",Usage,N/A
+7/1/24,35 N Cedar St,11-00160-6,Trash (City Charges),0,12.5,"1849	",,6/1/24,7/1/24,"57	",Charges,Refuse
+7/1/24,35 N Cedar St,11-00160-6,Water-Usage (CF),1900,186.01,"1849	",,6/1/24,7/1/24,"57	",Usage,Potable
+7/1/24,39 N Cedar St,11-00170-8,Electric-Usage (KWH),73,17.17,"1823	",,6/1/24,7/1/24,"62	",Usage,Grid Purchased
+7/1/24,39 N Cedar St,11-00170-8,Sewer-Usage (CF),0,21.33,"1823	",,6/1/24,7/1/24,"62	",Usage,N/A
+7/1/24,39 N Cedar St,11-00170-8,Trash (City Charges),0,12.5,"1823	",,6/1/24,7/1/24,"62	",Charges,Refuse
+7/1/24,39 N Cedar St,11-00170-8,Water-Usage (CF),0,29.37,"1823	",,6/1/24,7/1/24,"62	",Usage,Potable
+7/1/24,45 N Cedar St,11-00190-10,Electric-Usage (KWH),78,17.83,"1858	",,6/1/24,7/1/24,"68	",Usage,Grid Purchased
+7/1/24,45 N Cedar St,11-00190-10,Sewer-Usage (CF),0,21.33,"1858	",,6/1/24,7/1/24,"68	",Usage,N/A
+7/1/24,45 N Cedar St,11-00190-10,Trash (City Charges),0,12.5,"1858	",,6/1/24,7/1/24,"68	",Charges,Refuse
+7/1/24,45 N Cedar St,11-00190-10,Water-Usage (CF),0,29.37,"1858	",,6/1/24,7/1/24,"68	",Usage,Potable
+7/1/24,69 N Cedar St,11-00260-4,Electric-Usage (KWH),80,18.09,"1877	",,6/1/24,7/1/24,"79	",Usage,Grid Purchased
+7/1/24,69 N Cedar St,11-00260-4,Sewer-Usage (CF),100,21.33,"1877	",,6/1/24,7/1/24,"79	",Usage,N/A
+7/1/24,69 N Cedar St,11-00260-4,Trash (City Charges),0,12.5,"1877	",,6/1/24,7/1/24,"79	",Charges,Refuse
+7/1/24,69 N Cedar St,11-00260-4,Water-Usage (CF),100,29.37,"1877	",,6/1/24,7/1/24,"79	",Usage,Potable
+7/1/24,129 W College St,11-00670-8,Electric-Usage (KWH),0,7.5,"1809	",,6/1/24,7/1/24,"12	",Usage,Grid Purchased
+7/1/24,129 W College St,11-00670-8,Sewer-Usage (CF),0,21.33,"1809	",,6/1/24,7/1/24,"12	",Usage,N/A
+7/1/24,129 W College St,11-00670-8,Trash (City Charges),0,12.5,"1809	",,6/1/24,7/1/24,"12	",Charges,Refuse
+7/1/24,129 W College St,11-00670-8,Water-Usage (CF),0,29.37,"1809	",,6/1/24,7/1/24,"12	",Usage,Potable
+7/1/24,135 W College St,11-00680-1,Electric-Usage (KWH),381,57.97,"1839	",,6/1/24,7/1/24,"13	",Usage,Grid Purchased
+7/1/24,135 W College St,11-00680-1,Sewer-Usage (CF),400,28.44,"1839	",,6/1/24,7/1/24,"13	",Usage,N/A
+7/1/24,135 W College St,11-00680-1,Trash (City Charges),0,55.68,"1839	",,6/1/24,7/1/24,"13	",Charges,Refuse
+7/1/24,135 W College St,11-00680-1,Water-Usage (CF),400,39.16,"1839	",,6/1/24,7/1/24,"13	",Usage,Potable
+7/1/24,143 W College St,11-00700-1,Sewer-Usage (CF),0,21.33,"1813	",,6/1/24,7/1/24,"19	",Usage,N/A
+7/1/24,143 W College St,11-00700-1,Water-Usage (CF),0,29.37,"1813	",,6/1/24,7/1/24,"19	",Usage,Potable
+7/1/24,143 W College St,11-00701-1,Electric-Usage (KWH),206,34.79,"1813	",,6/1/24,7/1/24,"19	",Usage,Grid Purchased
+7/1/24,143 W College St,11-00701-1,Trash (City Charges),0,12.5,"1813	",,6/1/24,7/1/24,"19	",Charges,Refuse
+7/1/24,149 W College St,11-00740-2,Electric-Usage (KWH),2,7.77,"1895	",,6/1/24,7/1/24,"25	",Usage,Grid Purchased
+7/1/24,149 W College St,11-00740-2,Sewer-Usage (CF),0,21.33,"1895	",,6/1/24,7/1/24,"25	",Usage,N/A
+7/1/24,149 W College St,11-00740-2,Trash (City Charges),0,12.5,"1895	",,6/1/24,7/1/24,"25	",Charges,Refuse
+7/1/24,149 W College St,11-00740-2,Water-Usage (CF),0,29.37,"1895	",,6/1/24,7/1/24,"25	",Usage,Potable
+7/1/24,190 W College St,11-00920-1,Electric-Usage (KWH),106,21.54,"1846	",,6/1/24,7/1/24,"39	",Usage,Grid Purchased
+7/1/24,190 W College St,11-00920-1,Sewer-Usage (CF),300,21.33,"1846	",,6/1/24,7/1/24,"39	",Usage,N/A
+7/1/24,190 W College St,11-00920-1,Trash (City Charges),0,18.75,"1846	",,6/1/24,7/1/24,"39	",Charges,Refuse
+7/1/24,190 W College St,11-00920-1,Water-Usage (CF),300,29.37,"1846	",,6/1/24,7/1/24,"39	",Usage,Potable
+7/1/24,101 N Main St - CPO,12-01575-3,Electric-Usage (KWH),11,8.96,"9452	","7303	",6/1/24,7/1/24,"9452	",Usage,Grid Purchased
+7/1/24,140 N Main St Dn,12-01705-2,Sewer-Usage (CF),100,21.33,"1896	",,6/1/24,7/1/24,"17	",Usage,N/A
+7/1/24,140 N Main St Dn,12-01705-2,Water-Usage (CF),100,29.37,"1896	",,6/1/24,7/1/24,"17	",Usage,Potable
+7/1/24,140 N Main St Dn,12-01707-18,Electric-Usage (KWH),37,12.4,"1896	",,6/1/24,7/1/24,"17	",Usage,Grid Purchased
+7/1/24,140 N Main St Dn,12-01707-18,Trash (City Charges),0,12.5,"1896	",,6/1/24,7/1/24,"17	",Charges,Refuse
+7/1/24,140 N Main St Up Frnt,12-01709-16,Electric-Usage (KWH),16,9.61,"1896	",,6/1/24,7/1/24,"212	",Usage,Grid Purchased
+7/1/24,140 N Main St Up Frnt,12-01709-16,Trash (City Charges),0,12.5,"1896	",,6/1/24,7/1/24,"212	",Charges,Refuse
+7/1/24,140 1/2 N Main St Up Rear,12-01710-24,Electric-Usage (KWH),27,11.09,"1896	",,6/1/24,7/1/24,"196	",Usage,Grid Purchased
+7/1/24,140 1/2 N Main St Up Rear,12-01710-24,Trash (City Charges),0,12.5,"1896	",,6/1/24,7/1/24,"196	",Charges,Refuse
+7/1/24,148 N Main St,12-01725-23,Electric-Usage (KWH),86,18.89,"1892	",,6/1/24,7/1/24,"21	",Usage,Grid Purchased
+7/1/24,148 N Main St,12-01725-23,Sewer-Usage (CF),0,21.33,"1892	",,6/1/24,7/1/24,"21	",Usage,N/A
+7/1/24,148 N Main St,12-01725-23,Trash (City Charges),0,12.5,"1892	",,6/1/24,7/1/24,"21	",Charges,Refuse
+7/1/24,148 N Main St,12-01725-23,Water-Usage (CF),0,29.37,"1892	",,6/1/24,7/1/24,"21	",Usage,Potable
+7/1/24,168 N Main St - CPO,12-01800-4,Electric-Usage (KWH),194,33.19,"9451	",,6/1/24,7/1/24,"34	",Usage,Grid Purchased
+7/1/24,168 N Main St - CPO,12-01800-4,Sewer-Usage (CF),100,21.33,"9451	",,6/1/24,7/1/24,"34	",Usage,N/A
+7/1/24,168 N Main St - CPO,12-01800-4,Trash (City Charges),0,12.5,"9451	",,6/1/24,7/1/24,"34	",Charges,Refuse
+7/1/24,168 N Main St - CPO,12-01800-4,Water-Usage (CF),100,29.37,"9451	",,6/1/24,7/1/24,"34	",Usage,Potable
+7/1/24,35 Willard Ct #1,12-02090-13,Electric-Usage (KWH),90,19.42,"1862	","7303	",6/1/24,7/1/24,"58	",Usage,Grid Purchased
+7/1/24,36 N Pleasant St,12-02092-1,Electric-Usage (KWH),283,44.99,"1862	",,6/1/24,7/1/24,"59	",Usage,Grid Purchased
+7/1/24,36 N Pleasant St,12-02092-1,Sewer-Usage (CF),700,49.77,"1862	",,6/1/24,7/1/24,"59	",Usage,N/A
+7/1/24,36 N Pleasant St,12-02092-1,Trash (City Charges),0,197.1,"1862	",,6/1/24,7/1/24,"59	",Charges,Refuse
+7/1/24,36 N Pleasant St,12-02092-1,Water-Usage (CF),700,68.53,"1862	",,6/1/24,7/1/24,"59	",Usage,Potable
