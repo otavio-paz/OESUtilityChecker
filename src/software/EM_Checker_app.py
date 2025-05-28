@@ -156,14 +156,30 @@ def validate_files(em_file, bill_file, report_text):
             else:
                 results[acct] = True
         
-         # Output summary and details
+       # Output summary and details
         report_text.insert(tk.END, "\n=== VALIDATION SUMMARY ===\n")
         for acct, ok in results.items():
             status = "OK" if ok else "ERROR"
 
             # Attempt to get the address for this account
             address = df_bill[df_bill['ACCT#'] == acct].iloc[0, 1] if not df_bill[df_bill['ACCT#'] == acct].empty else "Address not found"
-            report_text.insert(tk.END, f"Account {acct} | Address: {address} | Status: {status}\n")
+            
+            # Create the line text
+            line_text = f"Account {acct} | Address: {address} | Status: {status}\n"
+            
+            # Insert the line and apply color formatting
+            if not ok:  # If there's an error
+                # Get the current position before inserting
+                start_pos = report_text.index(tk.END + "-1c")
+                report_text.insert(tk.END, line_text)
+                # Get the position after inserting
+                end_pos = report_text.index(tk.END + "-1c")
+                # apply red color to the inserted text
+                report_text.tag_add("error", start_pos, end_pos)
+                report_text.tag_config("error", foreground="red")
+            else:
+                report_text.insert(tk.END, line_text)
+                
         report_text.insert(tk.END, "\n=== DETAILS ===\n")
         if errors:
             for e in errors:
@@ -174,6 +190,7 @@ def validate_files(em_file, bill_file, report_text):
     except Exception as e:
         # Log any unexpected errors
         report_text.insert(tk.END, f"Error while processing files: {str(e)}\n")
+
 
 
 def save_report(report_text):
