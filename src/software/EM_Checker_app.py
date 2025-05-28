@@ -187,10 +187,30 @@ def validate_files(em_file, bill_file, report_text):
         else:
             report_text.insert(tk.END, "All accounts validated successfully!\n")
 
+        # Clear the files and reset drop zones after validation
+        clear_files_and_zones()
+    
     except Exception as e:
         # Log any unexpected errors
         report_text.insert(tk.END, f"Error while processing files: {str(e)}\n")
 
+def clear_files_and_zones():
+    """
+    This function clears the file store and resets the drop zones to their initial state.
+    """
+
+    # Clear the file store
+    file_store.clear()
+    
+    # Reset drop zone 1 (EM file)
+    drop_zone_1.config(text="Energy Manager (bill Export.csv)")
+    
+    # Reset drop zone 2 (Bill file)
+    drop_zone_2.config(text="Bill Spreadsheet")
+    
+    # Log the clearing action
+    report_text.insert(tk.END, "\n=== Files Cleared ===\n")
+    report_text.insert(tk.END, "Drop zones reset. Ready for new files.\n")
 
 
 def save_report(report_text):
