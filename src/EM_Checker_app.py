@@ -39,12 +39,22 @@ class DropZone(tk.Label):
         # Store filename under corresponding key
         self.file_store[self.filetype_key] = filename
         self.config(text=f"{self.filetype_key} file loaded: {os.path.basename(filename)}") # Update label to show loaded file
+        # Hide the browse button when file is loaded
+        self.browse_button.pack_forget()
         # Log to report
         self.report_text.insert(tk.END, f"{self.filetype_key} file loaded: {filename}\n")
         
         # If both EM and bill files are loaded, trigger validation callback
         if self.file_store.get("em_file") and self.file_store.get("bill_file"):
             self.on_files_ready(self.file_store["em_file"], self.file_store["bill_file"], self.report_text)
+    
+    def reset_zone(self, original_label):
+        """
+        This function resets the drop zone to its initial state.
+        """
+        self.config(text=original_label)
+        # Show the browse button again
+        self.browse_button.pack(side=tk.BOTTOM, pady=5)
 
     def on_drop(self, event):
         """
@@ -156,7 +166,7 @@ def validate_files(em_file, bill_file, report_text):
             else:
                 results[acct] = True
         
-       # Output summary and details
+         # Output summary and details
         report_text.insert(tk.END, "\n=== VALIDATION SUMMARY ===\n")
         for acct, ok in results.items():
             status = "OK" if ok else "ERROR"
@@ -174,7 +184,7 @@ def validate_files(em_file, bill_file, report_text):
                 report_text.insert(tk.END, line_text)
                 # Get the position after inserting
                 end_pos = report_text.index(tk.END + "-1c")
-                # apply red color to the inserted text
+                # Apply red color to the inserted text
                 report_text.tag_add("error", start_pos, end_pos)
                 report_text.tag_config("error", foreground="red")
             else:
@@ -186,27 +196,29 @@ def validate_files(em_file, bill_file, report_text):
                 report_text.insert(tk.END, f" - {e}\n")
         else:
             report_text.insert(tk.END, "All accounts validated successfully!\n")
-
+        
         # Clear the files and reset drop zones after validation
         clear_files_and_zones()
-    
+
     except Exception as e:
         # Log any unexpected errors
         report_text.insert(tk.END, f"Error while processing files: {str(e)}\n")
+        # Clear files even if there was an error
+        clear_files_and_zones()
+
 
 def clear_files_and_zones():
     """
     This function clears the file store and resets the drop zones to their initial state.
     """
-
     # Clear the file store
     file_store.clear()
     
     # Reset drop zone 1 (EM file)
-    drop_zone_1.config(text="Energy Manager (bill Export.csv)")
+    drop_zone_1.reset_zone("Energy Manager (bill Export.csv)")
     
     # Reset drop zone 2 (Bill file)
-    drop_zone_2.config(text="Bill Spreadsheet")
+    drop_zone_2.reset_zone("Bill Spreadsheet")
     
     # Log the clearing action
     report_text.insert(tk.END, "\n=== Files Cleared ===\n")

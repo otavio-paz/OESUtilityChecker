@@ -1,4 +1,4 @@
-('C:\\Users\\otavi\\OneDrive\\Documents\\Oberlin\\Projects\\OES\\OESUtilityChecker\\src\\software\\build\\EM '
+('C:\\Users\\otavi\\OneDrive\\Documents\\Oberlin\\Projects\\OES\\OESUtilityChecker\\src\\build\\EM '
  'Checker\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\otavi\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PIL\\__init__.py',
@@ -2031,6 +2031,12 @@
    'PYMODULE'),
   ('packaging._tokenizer',
    'C:\\Users\\otavi\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging.licenses',
+   'C:\\Users\\otavi\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\packaging\\licenses\\__init__.py',
+   'PYMODULE'),
+  ('packaging.licenses._spdx',
+   'C:\\Users\\otavi\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\packaging\\licenses\\_spdx.py',
    'PYMODULE'),
   ('packaging.markers',
    'C:\\Users\\otavi\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\packaging\\markers.py',
