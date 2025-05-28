@@ -103,6 +103,7 @@ def validate_files(em_file, bill_file, report_text):
         
         errors = [] # to collect error messages
         results = {} # to collect per-account pass/fail
+        account_addresses = {} # to store account addresses for later use
 
         # Iterate through each account in the bill (assumed unique, at least for bill)
         for idx, bill_row in df_bill.iterrows():
@@ -112,11 +113,15 @@ def validate_files(em_file, bill_file, report_text):
             if pd.isna(acct) or acct.strip() == "* CPO * ACCT#":
                 continue
             
+            # Store the address for this account
+            address = bill_row.iloc[1] if len(bill_row) > 1 else "Address not found"
+            account_addresses[acct] = address
+            
             # Filter EM rows for this account
             acct_errors = []
             em_acct = df_em[df_em['Account Number'] == acct]
             if em_acct.empty:
-                acct_errors.append(f"Account {acct}: not found in Energy Manager file.")
+                acct_errors.append(f"Account {acct} ({address}): not found in Energy Manager file.")
                 results[acct] = False
                 errors.extend(acct_errors)
                 continue
@@ -131,7 +136,7 @@ def validate_files(em_file, bill_file, report_text):
                 # Filter EM rows further by Line Item Type Name
                 em_rows = em_acct[em_acct['Line Item Type Name'].str.strip() == em_type]
                 if em_rows.empty and bill_val != 0:
-                    acct_errors.append(f"Account {acct}, '{bill_col}': EM missing rows with type '{em_type}'.")
+                    acct_errors.append(f"Account {acct} ({account_addresses[acct]}), '{bill_col}': EM missing rows with type '{em_type}'.")
                     continue
                 
                 # Gather all EM values for this utility
@@ -157,7 +162,7 @@ def validate_files(em_file, bill_file, report_text):
                 )
 
                 if not match_found and bill_num != 0:
-                    acct_errors.append(f"Account {acct}, '{bill_col}': bill={bill_num} not in EM values {em_vals}")
+                    acct_errors.append(f"Account {acct} ({account_addresses[acct]}), '{bill_col}': bill={bill_num} not in EM values {em_vals}")
             
             # Record result for this account
             if acct_errors:
