@@ -25,7 +25,7 @@ class DropZone(tk.Label):
 
     def on_file_received(self, filename):
         """
-        This function handle a file once dropped or selected. 
+        This method handle a file once dropped or selected. 
         It validates that the path exists, updates UI and triggers validation if both files are present.
 
         Input: filename (str) - the path of the file
@@ -50,7 +50,7 @@ class DropZone(tk.Label):
     
     def reset_zone(self, original_label):
         """
-        This function resets the drop zone to its initial state.
+        This method resets the drop zone to its initial state.
         """
         self.config(text=original_label)
         # Show the browse button again
@@ -58,7 +58,7 @@ class DropZone(tk.Label):
 
     def on_drop(self, event):
         """
-        This function is an event handler for drag-and-drop. Strips braces from filename and processes it.
+        This method is an event handler for drag-and-drop. Strips braces from filename and processes it.
         """
         filename = event.data.strip('{}')  # Handle filenames with spaces
         self.on_file_received(filename)
