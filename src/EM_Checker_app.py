@@ -9,7 +9,7 @@ class DropZone(tk.Label):
     def __init__(self, master, label, report_text, filetype_key, file_store, on_files_ready):
         # Initialize the label widget with styling
         super().__init__(master, text=label, bg="#2E2E2E", fg="white", borderwidth=1, relief="solid", pady=12)
-        # Enable drag-and-drop of files
+        # Enable drag-and-drop of files1``
         self.drop_target_register(DND_FILES)
         self.dnd_bind("<<Drop>>", self.on_drop)
        
@@ -77,6 +77,7 @@ def validate_files(em_file, bill_file, report_text):
     This function validates that entries in the bill spreadsheet match corresponding entries in the Energy Manager (EM) export.
     Logs validation progress and results to report_text widget.
     """
+    report_text.delete('1.0', tk.END) # clear previous report if any
     report_text.insert(tk.END, "\n=== Running Validation ===\n")
 
     try:
@@ -223,11 +224,11 @@ def clear_files_and_zones():
     drop_zone_1.reset_zone("Energy Manager (bill Export.csv)")
     
     # Reset drop zone 2 (Bill file)
-    drop_zone_2.reset_zone("Bill Spreadsheet")
+    drop_zone_2.reset_zone("Bill Spreadsheet (City_MMMusage_MMM-bill.xlsx)")
     
     # Log the clearing action
-    report_text.insert(tk.END, "\n=== Files Cleared ===\n")
-    report_text.insert(tk.END, "Drop zones reset. Ready for new files.\n")
+    # report_text.insert(tk.END, "\n=== Files Cleared ===\n")
+    # report_text.insert(tk.END, "Drop zones reset. Ready for new files.\n")
 
 
 def save_report(report_text):
@@ -279,7 +280,7 @@ file_store = {}
 drop_zone_1 = DropZone(frame_drop_zones, "Energy Manager (bill Export.csv)", report_text, "em_file", file_store, validate_files)
 drop_zone_1.pack(fill=tk.BOTH, expand=True)
 
-drop_zone_2 = DropZone(frame_drop_zones, "Bill Spreadsheet", report_text, "bill_file", file_store, validate_files)
+drop_zone_2 = DropZone(frame_drop_zones, "Bill Spreadsheet (City_MMMusage_MMM-bill)", report_text, "bill_file", file_store, validate_files)
 drop_zone_2.pack(fill=tk.BOTH, expand=True)
 
 # Start application loop
